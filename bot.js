@@ -27,11 +27,10 @@ client.on('connected', onConnectedHandler);
 
 client.connect();
 
-function onMessageHandler (target, ctxt, msg, self) {
+function onMessageHandler (target, tags, msg, self) {
     if (self || msg[0] !== "!") { return; }
 
     const commandName = msg.trim();
-    console.log(commandName);
 
     if (!commands.has(commandName.substring(1))) {
         console.log("command not found");
@@ -39,7 +38,7 @@ function onMessageHandler (target, ctxt, msg, self) {
     }
 
     try {
-        commands.get(commandName.substring(1)).execute(client, target, ctxt, msg);
+        commands.get(commandName.substring(1)).execute(client, target, tags, msg);
         console.log("Executed Command Succesfully");
     } catch(Error) {
         console.error(Error);
