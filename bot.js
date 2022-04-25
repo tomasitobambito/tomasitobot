@@ -30,7 +30,7 @@ client.connect();
 function onMessageHandler (target, tags, msg, self) {
     if (self || msg[0] !== "!") { return; }
 
-    const commandName = msg.trim();
+    const commandName = msg.trim().split(" ")[0];
 
     if (!commands.has(commandName.substring(1))) {
         console.log("command not found");
