@@ -11,3 +11,5 @@ Chatbot for the twitch channel [tomasitobambito](twitch.tv/tomasitobambito).
 ## <img src="https://cdn.7tv.app/emote/624c5d880fddabaf69e33ce8/1x"> Features <img src="https://cdn.7tv.app/emote/624c5d880fddabaf69e33ce8/1x">
 
 - Icebreaker command
+- RoastMe command
+- Compliment command
